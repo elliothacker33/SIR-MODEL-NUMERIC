@@ -68,7 +68,7 @@ Os parâmetros iniciais tomaram os seguintes valores:
 
 ## Resultados Numéricos
 
-O código para a execução do código encontra-se em [Epidemia](./src/epidemia.mlx).
+O código para a execução do código encontra-se em [Epidemia](./src/epidemia.m).
 
 Através do uso do método de range kutta de 4/5 ordem adaptativo conseguimos atingir as soluções do problema.
 A seguinte função foi usada:
