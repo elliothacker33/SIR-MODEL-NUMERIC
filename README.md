@@ -111,4 +111,3 @@ O número de individuos infetados acabou por ser menor que 10 ao fim de **90 dia
 
 ![Evolução da epidemia](assets/epidemic_evolution.png)
 
-## Resultados Analiticos
