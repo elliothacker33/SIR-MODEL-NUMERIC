@@ -66,4 +66,48 @@ Os parâmetros iniciais tomaram os seguintes valores:
 - ${N}$ = 1001 individuos (1 infetado e 1000 susceptiveis)
  
 
-## Resultados
+## Resultados Numéricos
+
+O código para a execução do código encontra-se em [Epidemia](./src/epidemia.m).
+
+Através do uso do método de range kutta de 4/5 ordem adaptativo conseguimos atingir as soluções do problema.
+A seguinte função foi usada:
+
+```matlab
+
+options = odeset('Events', @myEvent);
+
+[t, dState] = ode45(@epidemia, deltaT, SIR_STATE, options)
+
+[t, dState]
+
+function [value, isterminal, direction] = myEvent(deltaT, SIR_STATE)
+    value      = ~((SIR_STATE(2) - 10) < 0);
+    isterminal = 1;   
+    direction  = -1;
+end
+
+function dState = epidemia(deltaT, SIR_STATE)
+    
+    % Parametros iniciais
+    a = 0.002 / 7; % Taxa de infeção por dia
+    r = 0.15; % Taxa de recuperação por dia
+
+    S = SIR_STATE(1);
+    I = SIR_STATE(2);
+    R = SIR_STATE(3);
+
+    % O número de recuperados não depende dos próprios recuperados
+    % Apenas depende da taxa de infeção dos infetados.
+    dS = -a*S*I; 
+    dI = a*S*I - r*I; 
+    dR = r*I; 
+    dState = [dS; dI; dR];
+ 
+end
+```
+
+O número de individuos infetados acabou por ser menor que 10 ao fim de **90 dias**. A evolução da epidemia até o número de infetados ser menor que 10 pode ser descrito pelo seguinte gráfico.
+
+![Evolução da epidemia](assets/epidemic_evolution.png)
+
