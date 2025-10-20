@@ -64,9 +64,9 @@ $$
 
 Os parâmetros iniciais tomaram os seguintes valores:
 
-- $\beta$ = 0.002 (p/pessoa e semana)
-- $\gamma$ = 0.15 (p/dia)
-- $ N $ = 1001 individuos (1 infetado e 1000 susceptiveis)
+- ${\beta}$ = 0.002 (p/pessoa e semana)
+- ${\gamma}$ = 0.15 (p/dia)
+- ${N}$ = 1001 individuos (1 infetado e 1000 susceptiveis)
  
 
 ## Resultados
