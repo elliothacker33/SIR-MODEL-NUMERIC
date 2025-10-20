@@ -55,8 +55,9 @@ A imagem a seguir representa a transição entre estados do modelo epidemológic
 O modelo SIR é descrito pelas seguintes equações:
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.image?\dpi{150}\begin{cases}\frac{dS}{dt}=-\beta%20SI\\\frac{dI}{dt}=-\beta%20SI+\gamma%20I\\\frac{dR}{dt}=\gamma%20I\end{cases}" alt="SIR equations">
+  <img src="https://latex.codecogs.com/svg.image?\dpi{150}\color{white}\begin{cases}\frac{dS}{dt}=-\beta%20SI\\\frac{dI}{dt}=-\beta%20SI+\gamma%20I\\\frac{dR}{dt}=\gamma%20I\end{cases}" alt="SIR equations">
 </p>
+
 
 Os parâmetros iniciais tomaram os seguintes valores:
 
